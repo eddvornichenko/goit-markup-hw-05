@@ -563,13 +563,24 @@ img {
   justify-content: center;
   align-items: center;
 
-  margin-left: auto;
+  position: absolute;
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
   background-color: var(--cornflower);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  transition: color var(--animation), background var(--animation);
+}
+.modal-button:hover,
+.modal-button:focus {
+  background: var(--ocean);
 }
 .modal-icon {
   fill: var(--navy-blue);
+}
+.modal-icon :hover,
+.modal-icon:focus {
+  fill: #ffffff;
 }
