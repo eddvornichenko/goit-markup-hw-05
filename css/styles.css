@@ -112,17 +112,49 @@ img {
 }
 .header-nav-link {
   display: block;
+  position: relative;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--navy-blue);
   padding: 24px 0;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-nav-link:hover,
 .header-nav-link:focus {
   color: var(--ocean);
 }
+.current {
+  color: var(--ocean);
+}
+.current::after {
+  color: var(--ocean);
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--ocean);
+  border-radius: 2px;
+}
+
+.header-nav-link::after {
+  /* content: "";
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--ocean);
+  border-radius: 2px; */
+}
+
 .address-section {
   font-style: normal;
 }
@@ -133,6 +165,9 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--slate);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-item:hover,
@@ -182,6 +217,9 @@ img {
   border: none;
   border-radius: 4px;
   padding: 15px 31px;
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-section-button:hover,
 .hero-section-button:focus {
@@ -241,6 +279,12 @@ img {
   color: var(--iris);
   background: var(--cloud);
   cursor: pointer;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-button:hover,
 .filter-button:focus {
@@ -327,6 +371,9 @@ img {
   height: 40px;
   background-color: var(--iris);
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus {
@@ -354,6 +401,12 @@ img {
   border: 1px solid var(--light-slate);
   border-radius: 4px;
   color: var(--light-slate);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-icon {
   fill: currentColor;
@@ -406,6 +459,9 @@ img {
   height: 40px;
   background-color: var(--iris);
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -425,6 +481,12 @@ img {
   padding: 12px 24px;
   border: 1px solid var(--cornflower);
   border-radius: 4px;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-button:hover,
 .filter-button:focus {
@@ -455,9 +517,36 @@ img {
 }
 .gallery-link {
   display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .gallery-link:hover,
 .gallery-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  padding: 0 32px;
+  padding-top: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  background-color: var(--iris);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.overlay-label {
+  color: var(--white);
+}
+.gallery-box {
+  position: relative;
+  overflow: hidden;
+}
+.gallery-card:hover .overlay {
+  transform: translateY(0);
 }
