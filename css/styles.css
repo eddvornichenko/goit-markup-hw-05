@@ -580,7 +580,6 @@ img {
 .modal-icon {
   fill: var(--navy-blue);
 }
-.modal-icon :hover,
-.modal-icon:focus {
+.modal-button:hover .modal-icon {
   fill: #ffffff;
 }
